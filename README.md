@@ -1,17 +1,33 @@
-# InstaFlux
+# InstaFlux NextJS Runware Image Generator
 
 ![InstaFlux](instaflux.jpg)
 
 
-InstaFlux is a fast straightforward image generation tool that leverages the fast and affordable Runware API, built using Gradio. This application enables users to generate images from text prompts with various configuration options, requiring minimal coding knowledge or GPU environment setup with install scripts for windows and linux.
+This is a straightforward application that leverages the fast and affordable Runware API, built using NextJS. This application enables users to generate images from text prompts with various configuration options, requiring minimal coding knowledge or GPU environment setup with install scripts for windows and linux.
 
 ## Features
 
-- Input text prompts to generate images.
-- Configure the model, number of results, and image dimensions.
-- Option to provide negative prompts and use caching.
-- Fast flux 3 to 6 sec generation depending on model.
+-Input for Runware API key
+-Text prompts for image description
+-Negative prompts for excluding unwanted elements
+-Adjustable image dimensions
+-Configurable inference steps and guidance scale
+-Seed input for reproducible results
+-Batch size and number of results options
+-Scheduler selection
+-Options for using LCM, XL, Refiner, and ControlNet
+-Model selection
+-Output type and format selection
+-Real-time image preview
 - Must setup runware.ai account for API key. (free $15 will make 1000 512x512 images for about $1)
+
+## Prerequisites
+
+Before you begin, ensure you have met the following requirements:
+
+Node.js (v14.0.0 or later)
+npm (v6.0.0 or later)
+A Runware API key
 
 ## Quick Installation
 
@@ -20,55 +36,130 @@ To use the installation scripts:
 - On Windows, save the `win_quick.bat` file and double-click it to run.
 - On Linux, save the `linux_quick.sh` file, give it execute permissions with `chmod +x install.sh`, and then run it with `./linux_quick.sh`.
 
-(Note: The scripts pause before attempting to start the web UI, which won’t work until you add the API key to the `InstaFlux.py` file. After that, visit [http://127.0.0.1:7860](http://127.0.0.1:7860) in your browser.)
-
 ## Installation
 
-Ensure you have Git, Python, and pip installed. (The above scripts should check for and install these if they are not present.)
+Clone the repository:
+git clone https://github.com/PixifyAI/instaflux-nextjs
 
-1. Clone this repository:
-
-    ```bash
-    git clone https://github.com/PixifyAI/insta-flux
-    ```
+```plaintext
 
 2. Navigate to the project directory:
+```
 
-    ```bash
-    cd insta-flux
-    ```
+cd runware-image-generator
 
-3. Create a virtual environment (optional but recommended):
+```plaintext
 
-    ```bash
-    python -m venv venv
-    source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
-    ```
+3. Install the dependencies:
+```
 
-4. Install the required packages:
+npm install
 
-    ```bash
-    pip install -r requirements.txt
-    ```
-
-## Configuration
-
-1. Replace `RUNWARE_API_KEY` in `InstaFlux.py` with your actual Runware API key.
+```plaintext
 
 ## Usage
 
-Run the application using:
-
-```bash
-python InstaFlux.py
+1. Start the development server:
 ```
 
-The application will start a local server. Open your browser and navigate to [http://127.0.0.1:7860](http://127.0.0.1:7860) to access the Gradio interface.
+npm run dev
 
-## Troubleshooting
+```plaintext
 
-If you encounter issues related to themes or styling, ensure that your theme settings are correct or revert to default settings.
+2. Open your browser and visit `http://localhost:3000`
+
+3. Enter your Runware API key and configure the image generation parameters
+
+4. Click the "Generate Image" button to create your image
+
+## Configuration
+
+The application uses Next.js 13 with the App Router. The main component is located in `components/instaflux.tsx`. You can modify this file to add or remove features as needed.
+
+Here's the file structure for the Runware Image Generator project:
+
+```plaintext
+runware-image-generator/
+├── app/
+│   ├── layout.tsx
+│   └── page.tsx
+├── components/
+│   ├── ui/
+│   │   ├── button.tsx
+│   │   ├── card.tsx
+│   │   ├── input.tsx
+│   │   ├── select.tsx
+│   │   ├── slider.tsx
+│   │   └── switch.tsx
+│   └── instaflux.tsx
+├── styles/
+│   └── globals.css
+├── public/
+│   └── favicon.ico
+├── .gitignore
+├── next.config.js
+├── package.json
+├── README.md
+└── tailwind.config.js
+```
+
+Let's break down the structure:
+
+1. `app/`: This directory contains the main application files for Next.js 13 with App Router.
+
+1. `layout.tsx`: The root layout component.
+2. `page.tsx`: The main page component that renders the RunwareApp.
+
+
+
+2. `components/`: This directory contains all the React components used in the application.
+
+1. `ui/`: This subdirectory contains the shadcn/ui components.
+
+1. `button.tsx`: The Button component.
+2. `card.tsx`: The Card component.
+3. `input.tsx`: The Input component.
+4. `select.tsx`: The Select component.
+5. `slider.tsx`: The Slider component.
+6. `switch.tsx`: The Switch component.
+
+
+
+2. `instaflux.tsx`: The main component for the Runware Image Generator.
+
+
+
+3. `styles/`: This directory contains global styles.
+
+1. `globals.css`: Global CSS file, including Tailwind directives.
+
+
+
+4. `public/`: This directory is for static assets.
+
+1. `favicon.ico`: The favicon for the website.
+
+
+
+5. `.gitignore`: Specifies which files Git should ignore.
+6. `next.config.js`: Configuration file for Next.js.
+7. `package.json`: Defines the project dependencies and scripts.
+8. `README.md`: Contains information about the project, how to set it up, and how to use it.
+9. `tailwind.config.js`: Configuration file for Tailwind CSS.
+
+## Contributing
+
+Contributions to the Runware Image Generator are welcome. Please feel free to submit a Pull Request.
 
 ## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Acknowledgements
+
+- [Next.js](https://nextjs.org/)
+- [React](https://reactjs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [shadcn/ui](https://ui.shadcn.com/)
+- [Runware API](https://runware.ai/)
+```
