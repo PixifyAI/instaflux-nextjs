@@ -35,6 +35,7 @@ To use the installation scripts:
 
 - On Windows, save the `win_quick.bat` file and double-click it to run.
 - On Linux, save the `linux_quick.sh` file, give it execute permissions with `chmod +x install.sh`, and then run it with `./linux_quick.sh`.
+- This will clone the repo, install dependencies, start the server, and open the browser automatically.
 
 ## Installation
 
