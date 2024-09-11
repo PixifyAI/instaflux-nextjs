@@ -46,7 +46,7 @@ git clone https://github.com/PixifyAI/instaflux-nextjs
 2. Navigate to the project directory:
 ```
 
-cd runware-image-generator
+cd instaflux-nextjs
 
 ```plaintext
 
