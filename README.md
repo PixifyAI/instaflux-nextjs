@@ -1,4 +1,4 @@
-Runware Image Generator
+InstaFlux NextJS Runware Image Generator
 
 This is a Next.js application that uses the Runware API to generate images based on user input. The application provides a user-friendly interface for configuring various parameters for image generation.
 
@@ -28,7 +28,7 @@ A Runware API key
 Installation
 
 Clone the repository:
-git clone [https://github.com/yourusername/runware-image-generator.git](https://github.com/yourusername/runware-image-generator.git)
+git clone https://github.com/PixifyAI/instaflux-nextjs
 
 ```plaintext
 
@@ -63,7 +63,7 @@ npm run dev
 
 ## Configuration
 
-The application uses Next.js 13 with the App Router. The main component is located in `components/RunwareApp.tsx`. You can modify this file to add or remove features as needed.
+The application uses Next.js 13 with the App Router. The main component is located in `components/instaflux.tsx`. You can modify this file to add or remove features as needed.
 
 Here's the file structure for the Runware Image Generator project:
 
@@ -80,7 +80,7 @@ runware-image-generator/
 │   │   ├── select.tsx
 │   │   ├── slider.tsx
 │   │   └── switch.tsx
-│   └── RunwareApp.tsx
+│   └── instaflux.tsx
 ├── styles/
 │   └── globals.css
 ├── public/
@@ -114,7 +114,7 @@ Let's break down the structure:
 
 
 
-2. `RunwareApp.tsx`: The main component for the Runware Image Generator.
+2. `instaflux.tsx`: The main component for the Runware Image Generator.
 
 
 
