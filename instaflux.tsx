@@ -80,7 +80,7 @@ export default function RunwareApp() {
     <div className="min-h-screen bg-gray-900 text-white flex items-center justify-center p-4">
       <Card className="w-full max-w-4xl bg-gray-800 border-pink-500 border-2">
         <CardHeader>
-          <CardTitle className="text-2xl font-bold text-center text-pink-500">Runware API Image Generator</CardTitle>
+          <CardTitle className="text-2xl font-bold text-center text-pink-500">InstaFlux Image Generator</CardTitle>
         </CardHeader>
         <CardContent className="space-y-4">
           <div className="grid md:grid-cols-2 gap-4">
