@@ -25,9 +25,9 @@ This is a straightforward application that leverages the fast and affordable Run
 
 Before you begin, ensure you have met the following requirements:
 
-Node.js (v14.0.0 or later)
-npm (v6.0.0 or later)
-A Runware API key
+-Node.js (v14.0.0 or later)
+-npm (v6.0.0 or later)
+-A Runware API key
 
 ## Quick Installation
 
