@@ -1,23 +1,26 @@
-InstaFlux NextJS Runware Image Generator
+#InstaFlux NextJS Runware Image Generator
 
-This is a Next.js application that uses the Runware API to generate images based on user input. The application provides a user-friendly interface for configuring various parameters for image generation.
+![InstaFlux](instaflux.jpg)
 
-Features
 
-Input for Runware API key
-Text prompts for image description
-Negative prompts for excluding unwanted elements
-Adjustable image dimensions
-Configurable inference steps and guidance scale
-Seed input for reproducible results
-Batch size and number of results options
-Scheduler selection
-Options for using LCM, XL, Refiner, and ControlNet
-Model selection
-Output type and format selection
-Real-time image preview
+This is a straightforward application that leverages the fast and affordable Runware API, built using NextJS. This application enables users to generate images from text prompts with various configuration options, requiring minimal coding knowledge or GPU environment setup with install scripts for windows and linux.
 
-Prerequisites
+##Features
+
+-Input for Runware API key
+-Text prompts for image description
+-Negative prompts for excluding unwanted elements
+-Adjustable image dimensions
+-Configurable inference steps and guidance scale
+-Seed input for reproducible results
+-Batch size and number of results options
+-Scheduler selection
+-Options for using LCM, XL, Refiner, and ControlNet
+-Model selection
+-Output type and format selection
+-Real-time image preview
+
+##Prerequisites
 
 Before you begin, ensure you have met the following requirements:
 
@@ -25,7 +28,14 @@ Node.js (v14.0.0 or later)
 npm (v6.0.0 or later)
 A Runware API key
 
-Installation
+## Quick Installation
+
+To use the installation scripts:
+
+- On Windows, save the `win_quick.bat` file and double-click it to run.
+- On Linux, save the `linux_quick.sh` file, give it execute permissions with `chmod +x install.sh`, and then run it with `./linux_quick.sh`.
+
+##Installation
 
 Clone the repository:
 git clone https://github.com/PixifyAI/instaflux-nextjs
