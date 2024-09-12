@@ -1,6 +1,6 @@
 # InstaFlux NextJS Runware Image Generator
 
-![InstaFlux](instaflux.jpg)
+![InstaFlux](instaflux.png)
 
 
 
