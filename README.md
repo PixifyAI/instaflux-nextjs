@@ -1,6 +1,6 @@
 # InstaFlux NextJS Runware Image Generator
 
-![InstaFlux](instaflux.png)
+![InstaFlux](instaflux.jpg)
 
 
 
@@ -22,7 +22,7 @@ This is a straightforward application that leverages the fast and affordable Run
 -Real-time image preview
 - Must setup runware.ai account for API key. (for fast flux image generation, free $15 to start and will make 1000 512x512 images for about $1)
 
-![InstaFlux](UI.jpg)
+![InstaFlux](UI.png)
 
 ## Prerequisites
 
