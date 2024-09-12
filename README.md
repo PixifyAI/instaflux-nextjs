@@ -3,6 +3,7 @@
 ![InstaFlux](instaflux.jpg)
 
 
+
 This is a straightforward application that leverages the fast and affordable Runware API, built using NextJS. This application enables users to generate images from text prompts with various configuration options, requiring minimal coding knowledge or GPU environment setup with install scripts for windows and linux.
 
 ## Features
@@ -19,7 +20,9 @@ This is a straightforward application that leverages the fast and affordable Run
 -Model selection
 -Output type and format selection
 -Real-time image preview
-- Must setup runware.ai account for API key. (free $15 will make 1000 512x512 images for about $1)
+- Must setup runware.ai account for API key. (for fast flux image generation, free $15 to start and will make 1000 512x512 images for about $1)
+
+![InstaFlux](UI.jpg)
 
 ## Prerequisites
 
@@ -35,7 +38,6 @@ To use the installation scripts:
 
 - On Windows, save the `win_quick.bat` file and double-click it to run.
 - On Linux, save the `linux_quick.sh` file, give it execute permissions with `chmod +x install.sh`, and then run it with `./linux_quick.sh`.
-- This will clone the repo, install dependencies, start the server, and open the browser automatically.
 
 ## Installation
 
