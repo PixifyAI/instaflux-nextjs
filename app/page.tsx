@@ -1,4 +1,4 @@
-import InstaFlux from '@/components/InstaFlux'
+import InstaFlux from '../components/InstaFlux';
 
 export default function Home() {
   return (

@@ -8,6 +8,24 @@ interface TooltipProps {
   placement?: 'top' | 'bottom' | 'left' | 'right';
 }
 
+// TooltipProvider (if needed for context or shared state)
+const TooltipProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  // ... your provider logic (e.g., if you need to manage tooltip state globally) ...
+  return <>{children}</>;
+};
+
+// TooltipTrigger (component that triggers the tooltip)
+const TooltipTrigger: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  // ... your trigger logic (e.g., handle mouseover, focus, click events) ...
+  return <>{children}</>; 
+};
+
+// TooltipContent (component that displays the tooltip content)
+const TooltipContent: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  // ... your content rendering logic ...
+  return <div className={styles.content}>{children}</div>; // Wrap children in a div
+};
+
 const Tooltip: React.FC<TooltipProps> = ({ content, children, placement = 'top' }) => {
   const [isVisible, setIsVisible] = useState(false);
   const tooltipRef = useRef<HTMLDivElement>(null);
@@ -55,4 +73,5 @@ const Tooltip: React.FC<TooltipProps> = ({ content, children, placement = 'top' 
   );
 };
 
+export { TooltipProvider, Tooltip, TooltipTrigger, TooltipContent };
 export default Tooltip;

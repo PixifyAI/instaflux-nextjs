@@ -8,6 +8,17 @@ interface AlertProps {
   onClose?: () => void;
 }
 
+const AlertTitle: React.FC<React.HTMLAttributes<HTMLHeadingElement>> = ({ children, ...props }) => (
+  <h2 className={styles.title} {...props}>
+    {children}
+  </h2>
+);
+
+const AlertDescription: React.FC<React.HTMLAttributes<HTMLParagraphElement>> = ({ children, ...props }) => (
+  <p className={styles.description} {...props}>
+    {children}
+  </p>
+);
 const Alert: React.FC<AlertProps> = ({ type = 'info', message, onClose }) => {
   const alertClass = styles.alert + ' ' + styles[type]; // Combine base class with type-specific class
 
@@ -22,5 +33,5 @@ const Alert: React.FC<AlertProps> = ({ type = 'info', message, onClose }) => {
     </div>
   );
 };
-
+export { Alert, AlertTitle, AlertDescription };
 export default Alert;

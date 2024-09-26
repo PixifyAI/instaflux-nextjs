@@ -1,4 +1,4 @@
-// tabs.tsx
+// components/ui/tabs.tsx
 import React, { useState } from 'react';
 import styles from './tabs.module.css';
 
@@ -25,29 +25,42 @@ const Tabs: React.FC<TabsProps> = ({ tabs, defaultActiveTab = 0, onChange }) => 
 
   return (
     <div className={styles.tabsContainer}>
-      <ul className={styles.tabList}>
+      <TabsList>
         {tabs.map((tab, index) => (
-          <li
-            key={index}
-            className={`${styles.tab} ${activeTab === index ? styles.activeTab : ''}`}
-            onClick={() => handleTabClick(index)}
-          >
+          <TabsTrigger key={index} index={index} isActive={index === activeTab} onClick={() => handleTabClick(index)}>
             {tab.label}
-          </li>
+          </TabsTrigger>
         ))}
-      </ul>
+      </TabsList>
       <div className={styles.tabPanels}>
         {tabs.map((tab, index) => (
-          <div
-            key={index}
-            className={`${styles.tabPanel} ${activeTab === index ? styles.activeTabPanel : ''}`}
-          >
+          <TabsContent key={index} isActive={index === activeTab}>
             {tab.content}
-          </div>
+          </TabsContent>
         ))}
       </div>
     </div>
   );
 };
 
-export default Tabs;
+// Separate components for TabsList, TabsTrigger, and TabsContent
+const TabsList: React.FC<{ children: React.ReactNode }> = ({ children }) => (
+  <ul className={styles.tabList}>{children}</ul>
+);
+
+const TabsTrigger: React.FC<{ children: React.ReactNode; index: number; isActive: boolean; onClick: () => void }> = ({ children, index, isActive, onClick }) => (
+  <li 
+    className={`${styles.tab} ${isActive ? styles.activeTab : ''}`} 
+    onClick={onClick}
+  >
+    {children}
+  </li>
+);
+
+const TabsContent: React.FC<{ children: React.ReactNode; isActive: boolean }> = ({ children, isActive }) => (
+  <div className={`${styles.tabPanel} ${isActive ? styles.activeTabPanel : ''}`}>
+    {children}
+  </div>
+);
+
+export { Tabs, TabsList, TabsTrigger, TabsContent }; 
