@@ -1,9 +1,9 @@
-import RunwareApp from '@/components/RunwareApp'
+import InstaFlux from '@/components/InstaFlux'
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-gray-900">
-      <RunwareApp />
+      <InstaFlux />
     </main>
   )
 }

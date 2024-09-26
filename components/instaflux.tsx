@@ -13,7 +13,7 @@ import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
 import { Label } from "@/components/ui/label"
 import { Image, Settings, Wand2, AlertCircle, Info } from 'lucide-react'
 
-export default function RunwareApp() {
+export default function InstaFlux() {
   const [apiKey, setApiKey] = useState('')
   const [prompt, setPrompt] = useState('')
   const [negativePrompt, setNegativePrompt] = useState('')

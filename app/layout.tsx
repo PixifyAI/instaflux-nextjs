@@ -1,11 +1,12 @@
-import '@/styles/globals.css'
+import './globals.css';
+import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 
 const inter = Inter({ subsets: ['latin'] })
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Runware Image Generator',
-  description: 'Generate images using the Runware API',
+  description: 'Next-Generation AI Creative Studio',
 }
 
 export default function RootLayout({
@@ -19,3 +20,5 @@ export default function RootLayout({
     </html>
   )
 }
+
+

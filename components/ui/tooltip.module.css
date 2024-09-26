@@ -1,0 +1,49 @@
+/* tooltip.module.css */
+
+.tooltipContainer {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip {
+  position: absolute;
+  background-color: #333; /* Dark background */
+  color: #fff; /* White text */
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 14px;
+  opacity: 0; 
+  transition: opacity 0.2s ease-in-out;
+  pointer-events: none; /* Prevent tooltip from interfering with mouse events */
+  z-index: 10; /* Ensure tooltip is above other elements */
+}
+
+/* Positioning styles for different placements */
+.tooltip.top {
+  bottom: 100%; 
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.tooltip.bottom {
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.tooltip.left {
+  right: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.tooltip.right {
+  left: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Show tooltip on hover */
+.tooltipContainer:hover .tooltip {
+  opacity: 1;
+}
